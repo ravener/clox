@@ -1,5 +1,5 @@
 # Extended CLox
-This repository is an extension of [clox](https://github.com/munificent/craftinginterpreters/blob/master/c) from Part 2 of the book [Crafting Interpreters](https://craftinginterpreters.com)
+This repository is an extension of [clox](https://github.com/munificent/craftinginterpreters/blob/master/c) from the book [Crafting Interpreters](https://craftinginterpreters.com)
 
 It implements various features and optimizations that you might want to learn about and add to your own implementations.
 
