@@ -1,17 +1,17 @@
 # Extended CLox
 This repository is an extension of [clox](https://github.com/munificent/craftinginterpreters/blob/master/c) from the book [Crafting Interpreters](https://craftinginterpreters.com)
 
-It implements various features and optimizations that you might want to learn about and add to your own implementations.
+It implements various features and optimizations you might want to learn about and add to your implementations.
 
-The goal is to take clox to the next level while still keeping it simple to understand the new concepts.
+The goal is to take clox to the next level while keeping it simple to understand the new concepts.
 
 ## What's new
-Below is all the changes with an explanation and links to various resources to learn more.
+Below are all the changes, along with an explanation and links to various resources for learning more.
 
 ## Computed Goto
 The code is given a macro switch to enable a different approach for the VM's dispatch loop using `goto` this is known to speed up dispatch by about 15-25%
 
-This approach is also used by Ruby's YARV, CPython and Dalvik (Android's Java VM)
+This approach is also used by Ruby's YARV, CPython, and Dalvik (Android's Java VM)
 
 The code structure to implement it was inspired by [Wren][wren]
 
@@ -58,13 +58,13 @@ This approach is also used by Ruby, in both the main [ruby](https://github.com/r
 ## Extra Native Functions
 A few more small functions have been added to make it more useful:
 - `gc()` Manually triggers a garbage collection and returns the amount of bytes freed.
-- `gcHeapSize()` How much bytes are allocated. (And tracked by GC)
+- `gcHeapSize()` How many bytes are allocated. (And tracked by GC)
 - `exit()` Exits the VM.
 
 For some reason, I enjoy garbage collection statistics, in an ideal language with modules I'd create more functions and put them up under a `gc` module.
 
 ## Other Changes
-Some other changes that doesn't need its own section include:
+Some other changes that don't need their own section include:
 - Optimized the dispatch loop with macros for pushing/popping/peeking to avoid the overhead of a function call.
 - Support hexadecimal literals (e.g `0xFF`)
 - Support ternary conditionals (e.g `a ? b : c`)
@@ -77,7 +77,7 @@ $ gcc src/*.c -o clox -O3
 ```
 Should suffice.
 
-Do keep in mind the `gperf` hash function, you may want to integrate that in to your build tool somehow. I recommend doing so for developement but for release it's better to just publish the generated file and let users compile rightaway.
+Do keep in mind the `gperf` hash function, you may want to integrate that into your build tool somehow. I recommend doing so for development but for release, it's better to just publish the generated file and let users compile right away.
 
 ## TODO
 Other changes I'd like to demonstrate in this repository include:
