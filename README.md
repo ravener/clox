@@ -20,7 +20,7 @@ The opcodes list was also moved into its own [opcodes.h](src/opcodes.h) file usi
 Note that this is not a standard C feature and not all compilers support it, while `clang` and `gcc` support it, Windows Visual Studio does not. The VM feature is hidden behind a macro and will be disabled for Windows automatically and default to the switch-case.
 
 **Resources**
-- [X Macro - Wikipedia](xmacro)
+- [X Macro - Wikipedia][xmacro]
 - [Goto - Wikipedia](https://en.wikipedia.org/wiki/Goto)
 - [Computed goto for efficient dispatch tables - Eli Bendersky's website](https://eli.thegreenplace.net/2012/07/12/computed-goto-for-efficient-dispatch-tables)
 - Related code in Wren: [wren\_opcodes.h](https://github.com/wren-lang/wren/blob/4ffe2ed38b238ff410e70654cbe38883f7533d3f/src/vm/wren_opcodes.h) and [wren\_vm.c](https://github.com/wren-lang/wren/blob/4ffe2ed38b238ff410e70654cbe38883f7533d3f/src/vm/wren_vm.c#L890)
